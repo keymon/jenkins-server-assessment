@@ -47,5 +47,5 @@ variable "amis" {
 
 variable "key_pair_name" {
   description = "SSH Key Pair name to be used to launch EC2 instances"
-  default     = "keymon"
+  default     = "terraform-keypair"
 }

@@ -1,4 +1,4 @@
-resource "aws_instance" "example" {
+resource "aws_instance" "jenkins" {
   instance_type = "t2.micro"
   ami = "${lookup(var.amis, var.region)}"
   subnet_id = "${aws_subnet.main.0.id}"
@@ -6,7 +6,7 @@ resource "aws_instance" "example" {
   security_groups = ["${aws_security_group.basic.id}"]
   source_dest_check = false
   tags = {
-    Name = "${var.env}-example"
+    Name = "${var.env}-jenkins"
   }
 }
 
