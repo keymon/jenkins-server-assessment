@@ -1,0 +1,5 @@
+- hosts: myenv-jenkins
+  vars:
+    jenkins_hostname: jenkins.example.com
+  roles:
+    - geerlingguy.jenkins
